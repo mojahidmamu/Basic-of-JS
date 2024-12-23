@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Event Bubble</title>
+  <style>
+    #item-2{
+      border: 2px solid yellow;
+    }
+    ul {
+      border: 2px solid green;
+    }
+     body {
+      border: 2px solid blue;
+    }
+     section{
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body id="body">
+  <h1>Exploring Event Bubble</h1>
+  <section id="list-container">
+    <!-- ul>li#item-$*5>lorem2 -->
+    <ul id=" list-ul">
+      <li id="item-1">Lorem, ipsum.</li>
+      <li id="item-2">Quae, nemo!</li>
+      <li id="item-3">Soluta, adipisci.</li>
+      <li id="item-4">Ad, harum.</li>
+      <li id="item-5">Iure, dolorem!</li>
+      <li id="item-6">Iure, mojahid!</li>
+    </ul>
+    <button id="btn-add">Add Button</button>
+  </section>
+  <script>
+    document.getElementById('item-2').addEventListener('click', function(){
+      console.log( 'item -li of 2');
+    });
+    // document.getElementById('list-ul').addEventListener('click', function(){
+    //   console.log( 'this is list of the ul');
+    // });
+    document.getElementById('list-container').addEventListener('click', function(){
+      console.log( 'this is section container');
+    });
+    document.getElementById('body').addEventListener('click', function(){
+      console.log( 'this is body of the html');
+    });
+    //  
+  </script>
+</body>
+</html>

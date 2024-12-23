@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Example</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dynamic Table Example</h2>
+
+<table id="myTable">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </tr>
+</table>
+
+<br>
+
+<!-- Input fields to add a new row -->
+First Name: <input type="text" id="fname" placeholder="First Name">
+Last Name: <input type="text" id="lname" placeholder="Last Name">
+Age: <input type="number" id="age" placeholder="Age">
+<button onclick="addRow()">Add Row</button>
+
+<script>
+    function addRow() {
+        // Get the input values
+        let firstName = document.getElementById("fname").value;
+        let lastName = document.getElementById("lname").value;
+        let age = document.getElementById("age").value;
+
+        // Find the table
+        let table = document.getElementById("myTable");
+
+        // Create a new row and cells
+        let newRow = table.insertRow();
+        let cell1 = newRow.insertCell(0);
+        let cell2 = newRow.insertCell(1);
+        let cell3 = newRow.insertCell(2);
+
+        // Add values to the cells
+        cell1.innerHTML = firstName;
+        cell2.innerHTML = lastName;
+        cell3.innerHTML = age;
+
+        // Clear the input fields after adding
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("age").value = "";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tour of DOM</title>
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    .fruits-container li{
+      color:  red;
+    }
+    li {
+      color: green;
+    }
+    #fruits-title{
+      color:  black;
+    }
+    .favourite-places{
+      color:  gray;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to my DOM</h1>
+  </header>
+  <main id="main-content">
+
+    <section>
+      <h1>My dom de re baba</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In at rem excepturi deleniti, harum aperiam veritatis
+        aliquid velit. Rem dolore est amet officia quae laborum nam reprehenderit dolorem saepe at?</p>
+      <ul>
+        <li>Mojahi</li>
+        <li>Jarif</li>
+        <li>Galib</li>
+        <li>Dhaka</li>
+      </ul>
+    </section>
+
+    <section class="fruits-container">
+      <h1>Fruits I like </h1>
+      <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Babana</li>
+      </ul>
+    </section>
+
+    <section id="places-container">
+      <h1 id="places-title">Places i like to visit </h1>
+      <ul id=" place-list">
+        <li class="favourite-places">Bula</li>
+        <li class="favourite-places">Chittagong</li>
+        <li class="favourite-places">Dhaka</li>
+        <li class="favourite-places">Cox-s Bazar</li>
+      </ul>
+    </section>
+
+  </main>
+  <script src="JS/dom.js"></script>
+  <script src="JS/style.js"></script>
+  <script src="JS/append.js"></script>
+  <script>
+    const liCollection = document.getElementsByTagName('li')
+    //  console.log( liCollection);
+    // console.log( 'oii boro vai ki kibiria');
+    for (const li of liCollection) {
+      // console.log(li);
+    }
+    // const allHeadings = document.getElementsByTagName('li');
+    // for(const li of allHeadings){
+    //   console.log( li.innerText);
+    // }
+    // const allHeadings = document.getElementsByTagName('h1');
+    // for(const h1 of allHeadings){
+    //   console.log( h1);
+    // }
+
+    // const Places = document.getElementsByClassName('favourite-places')
+    // for(const Place of Places){
+    //   console.log( Place.innerText);
+    // }
+
+     const someLi = document.querySelectorAll('.fruits-container li');
+      for (const li of someLi){
+        // console.log( li.innerText);
+      }
+
+    // Option-1:  getElementsByTagName
+    // Option-2:  getElementById
+    // Option-3:  getElementsByClassName
+    // Option-4:  querySelector
+    // Option-5:  querySelectorAll
+
+  </script>
+</body>
+</html>

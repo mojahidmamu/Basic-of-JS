@@ -1,0 +1,35 @@
+<!-- This is practise task-01 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  All Practise</title>
+</head>
+<body>
+   <h1 id="headline">This is my sectet info</h1>
+   <input id="delete-text" type="text" placeholder="type in here 'delete' " > 
+   <button id="remove-btn" disabled>Remove</button>
+   <script>
+     document.getElementById('delete-btn').addEventListener('keyup', function(event){
+      const text = event.target.value;
+      const buttonremove = document.getElementById('remove-btn');
+      if(text === 'delete'){
+        buttonremove.removeAttribute('disabled');
+      }
+      else{
+        buttonremove.setAttribute('disabled', true);
+      }
+     })
+
+     document.getElementById('remove-btn').addEventListener('click', function(){
+        const secret = document.getElementById('headline');
+        secret.style.display = 'none';
+    });
+   </script>
+</body>
+</html>
+
+<!-- This is practise task -02 -->
+ 

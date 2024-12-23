@@ -1,0 +1,7 @@
+.common-style{
+  background-color:  red;
+}
+.common-class {
+  font-size: 50px;
+  border: 2px solid red;
+}

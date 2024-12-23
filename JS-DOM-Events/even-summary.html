@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> JS DOM SUMMARY</title>
+</head>
+<body>
+   <h1>Final DOM Event summary </h1>
+   <h3 id="comolakko">I want to be a web developer.</h3>
+
+   <p id="input-right">Default text by Mojahid</p>
+    <input id="input-task" type="text">
+    <button id="upgrade">Update</button>
+    <br>
+    <br>
+   <button onclick="oiimojahid()">Hello,,Mojahid</button>
+   <button id="event-mojahid">natok kom koro pio,</button>
+   <script src="js/events.js"></script>
+   <script>
+      function oiimojahid(){
+        const comolakko = document.getElementById('comolakko');
+        comolakko.innerText = 'Oii mama na piliz amare koma kore dao';
+      }
+      // option-2
+       document.getElementById('event-mojahid').addEventListener('click', function(){
+        const comolakko = document.getElementById('comolakko');
+        comolakko.innerText = 'tomi kinto haun uncle'
+       })
+      //  option-2 recap
+      document.getElementById('upgrade').addEventListener('click', function(){
+         const inputtask = document.getElementById('input-task');
+          const inputtesk = inputtask.value;
+
+          const p = document.getElementById('input-right');
+          p.innerText = inputtesk;
+          inputtask.value = '';
+      })
+   </script>
+</body>
+</html>

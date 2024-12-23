@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestine Flag</title>
+    <style>
+        .flag {
+            width: 600px; /* Width of the flag */
+            height: 360px; /* Height of the flag, keeping the 5:3 ratio */
+            position: relative;
+        }
+
+        .black {
+            background-color: #000000; /* Black color */
+            height: 33.33%; /* One third of the flag */
+            width: 100%;
+        }
+
+        .white {
+            background-color: #FFFFFF; /* White color */
+            height: 33.33%; /* One third of the flag */
+            width: 100%;
+        }
+
+        .green {
+            background-color: #007A3D; /* Green color */
+            height: 33.33%; /* One third of the flag */
+            width: 100%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-top: 180px solid transparent;
+            border-bottom: 180px solid transparent;
+            border-right: 240px solid #CE1126; /* Red color */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flag">
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="green"></div>
+        <div class="triangle"></div>
+    </div>
+
+</body>
+</html>

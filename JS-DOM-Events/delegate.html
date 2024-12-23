@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Delegate </title>
+ </head>
+ <body>
+    <h1>Delegate Exploring </h1>
+    <!-- section>ul#list-container>li.item-$*6>lorem3 -->
+    <section>
+      <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Dignissimos, quidem eum!</li>
+        <li class="item">Commodi, rem expedita!</li>
+        <li class="item">Sed, quas nostrum.</li>
+        <li class="item">Accusantium, corporis id.</li>
+        <li class="item">Similique, dolores. Porro!</li>
+      </ul>
+    </section>
+    <script>
+      const items = document.getElementsByClassName('item');
+      for (const item of items){
+        item.addEventListener('click', function(){
+         event.target.parentNode.removeChild(event.target); 
+        })
+      }
+
+      // 
+      document.getElementById('btn-add').addEventListener('click', function(){
+        const listContainer = document.getElementById('list-container');
+
+        const li = document.createElement('li');
+        li.innerText = 'mojahid bala aconi '
+        listContainer.appendChild(li); 
+      })
+    </script>
+ </body>
+ </html>
